@@ -9,6 +9,8 @@ public class PlayerController : MonoBehaviour
     public Rigidbody2D rb;
     public LayerMask layerMask;
     private Animator animator;
+
+    public bool noChao;
     // Start is called before the first frame update
     
     void Awake(){
@@ -19,13 +21,15 @@ public class PlayerController : MonoBehaviour
     void Update(){
         
         //caso o collider seja != de nulo é porque colidou com algo do layer selecionando 
-        bool noChao = Physics2D.Raycast(transform.position, Vector3.down, 3f, layerMask).collider != null;
+        noChao = Physics2D.Raycast(transform.position, Vector3.down, 3f, layerMask).collider != null;
         
         //mudar as animações
         animator.SetBool("run", Input.GetButton("Horizontal"));
+        animator.SetBool("chao", noChao);
         
             //Para pular Jump é o botão de espaço / só pula se estiver no chão
-        if (Input.GetButton("Jump") && noChao) {
+        if (Input.GetButtonDown("Jump") && noChao) {
+            animator.SetTrigger("jump");
             // aqui vai receber um força empurrando para cima
             rb.AddForce(Vector2.up * forcaPulo);            
         }
