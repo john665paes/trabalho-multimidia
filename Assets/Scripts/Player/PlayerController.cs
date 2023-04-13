@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
     }
-    // Update is called once per frame 
+    // Update is called once per frame
     void Update(){
         
         //caso o collider seja != de nulo é porque colidou com algo do layer selecionando 
