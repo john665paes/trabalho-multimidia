@@ -36,12 +36,12 @@ public class PlayerController : MonoBehaviour
         //Horizontal - movimentação esquerda e direita
         if (Input.GetAxisRaw("Horizontal") > 0){
             transform.Translate(Vector2.right * velocidade * Time.deltaTime);
-            transform.localScale = new Vector3(1, 1, 1);
+            transform.localScale = new Vector3(2, 2, 1);
 
         } else if (Input.GetAxisRaw("Horizontal") < 0){
             transform.Translate(Vector2.left * velocidade * Time.deltaTime);
             //para virar a esquerda
-            transform.localScale = new Vector3(-1, 1, 1);
+            transform.localScale = new Vector3(-2, 2, 1);
         }
     }
 }
