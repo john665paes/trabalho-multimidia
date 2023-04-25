@@ -131,8 +131,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 707e2d45b5a39c64ba4253c497f1caeb
-      internalID: 2102043862
+      spriteID: 7fcca22b9673e7348ac494493a9ae30a
+      internalID: -298124407
       vertices: []
       indices: 
       edges: []
@@ -152,8 +152,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 444758ea8b992d545afedac276cd91cf
-      internalID: 212203842
+      spriteID: 2836e99ed9a96a24f9c991577307ba5b
+      internalID: 1692633411
       vertices: []
       indices: 
       edges: []
@@ -173,8 +173,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1575f907b53067f42b7d63a5bd616e9d
-      internalID: -1645739433
+      spriteID: 49ac23d13e8785e448f46b0adf8aeeff
+      internalID: -1405824434
       vertices: []
       indices: 
       edges: []
@@ -190,9 +190,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      jump2_0: 2102043862
-      jump2_1: 212203842
-      jump2_2: -1645739433
+      jump2_0: -298124407
+      jump2_1: 1692633411
+      jump2_2: -1405824434
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
