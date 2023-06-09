@@ -11,7 +11,7 @@ public class Inimigo : MonoBehaviour{
 
     }
      void Update(){
-        transform.position = Vector3.MoveTowards(transform.position, player.transform.position, velocidade*Time.deltatime);
+        transform.position = Vector3.MoveTowards(transform.position, player.transform.position, velocidade*Time.deltaTime);
     }
 
 }
