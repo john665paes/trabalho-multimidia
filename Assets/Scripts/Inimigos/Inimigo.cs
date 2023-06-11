@@ -6,7 +6,7 @@ public class Inimigo : MonoBehaviour{
 
     private GameObject player; 
     public float velocidade = 2f;
-    private bool moverInimigo = true;
+    private bool moverInimigo = false;
     private Animator animator;
     void Awake(){
         animator = GetComponent<Animator>();
@@ -33,11 +33,11 @@ public class Inimigo : MonoBehaviour{
 
     }
     void OnTriggerEnter2D(Collider2D other) {
-        if (other.gameObject.tag == "Player") moverInimigo = false;
+        if (other.gameObject.tag == "Player") moverInimigo = true;
     }
 
     void OnTriggerExit2D(Collider2D other) {
-        if (other.gameObject.tag == "Player") moverInimigo = true;
+        if (other.gameObject.tag == "Player") moverInimigo = false;
     }
     
 }
