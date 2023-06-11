@@ -4,14 +4,35 @@ using UnityEngine;
 
 public class Inimigo : MonoBehaviour{
 
-    private GameObject player;
+    private GameObject player; 
     public float velocidade = 2f;
+    private bool moverInimigo = true;
+    private Animator animator;
+    void Awake(){
+        animator = GetComponent<Animator>();
+    }
     void Start(){
+        
         player = GameObject.FindGameObjectWithTag("Player");
+    }
+    void Update(){
+        if (moverInimigo)
+            transform.position = Vector3.MoveTowards(transform.position, player.transform.position, velocidade*Time.deltaTime);
+            animator.SetBool("run", true);
+
+        // MOVIMENTAÇÃO PARA OS LADOS
+        if (transform.position.x < player.transform.position.x) {
+            transform.localScale = new Vector3(2, 2, 1); //Direita
+        } else 
+        {
+            transform.localScale = new Vector3(-2, 2, 1); //Esquerda
+        }
 
     }
-     void Update(){
-        transform.position = Vector3.MoveTowards(transform.position, player.transform.position, velocidade*Time.deltaTime);
+    void OnTriggerEnter2d(Collider2D other){
+        if (other.gameObject.tag == "Player") moverInimigo = true;
     }
-
+    void OnTriggerExit2d(Collider2D other){
+        if (other.gameObject.tag == "Player") moverInimigo = false;
+    }
 }
