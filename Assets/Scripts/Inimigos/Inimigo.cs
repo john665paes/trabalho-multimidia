@@ -16,9 +16,12 @@ public class Inimigo : MonoBehaviour{
         player = GameObject.FindGameObjectWithTag("Player");
     }
     void Update(){
-        if (moverInimigo)
+        if (moverInimigo){
             transform.position = Vector3.MoveTowards(transform.position, player.transform.position, velocidade*Time.deltaTime);
             animator.SetBool("run", true);
+        }else{
+            animator.SetBool("run", false);
+        }
 
         // MOVIMENTAÇÃO PARA OS LADOS
         if (transform.position.x < player.transform.position.x) {
@@ -29,10 +32,12 @@ public class Inimigo : MonoBehaviour{
         }
 
     }
-    void OnTriggerEnter2d(Collider2D other){
-        if (other.gameObject.tag == "Player") moverInimigo = true;
-    }
-    void OnTriggerExit2d(Collider2D other){
+    void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.tag == "Player") moverInimigo = false;
     }
+
+    void OnTriggerExit2D(Collider2D other) {
+        if (other.gameObject.tag == "Player") moverInimigo = true;
+    }
+    
 }
