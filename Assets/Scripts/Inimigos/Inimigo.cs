@@ -8,6 +8,8 @@ public class Inimigo : MonoBehaviour{
     public float velocidade = 2f;
     private bool moverInimigo = false;
     private Animator animator;
+    public int dano;
+
     void Awake(){
         animator = GetComponent<Animator>();
     }
