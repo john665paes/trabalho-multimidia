@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Ataque : MonoBehaviour
+public class attacInimigo : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -15,9 +15,8 @@ public class Ataque : MonoBehaviour
     {
         
     }
-
-    void OnTriggerEnter2D(Collider2D colider) {
-        if (colider.gameObject.name == "Player") {
+    void OnTriggerEnter2D(Collider2D colidir) {
+        if (colidir.gameObject.name == "Player") {
             Debug.Log("ACERTOU PLAYER");
         }
     }

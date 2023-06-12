@@ -15,7 +15,7 @@ public class AttackPlayer : MonoBehaviour
     void Update()
     {   
         // Time.time verifica o tempo do jogo
-         if(Input.GetButtonDown("Fire1") && Time.time > proximoAtaque)
+         if(Input.GetButtonDown("Fire2") && Time.time > proximoAtaque)
          {
             Atacando();
          }
