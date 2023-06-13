@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
     private Animator animator;
 
     public int hp = 10;
-    public int poder = 4
+    public int poder = 4;
     
     public bool noChao;
     // Start is called before the first frame update

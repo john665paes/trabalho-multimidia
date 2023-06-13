@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Inimigos
+  - dano1
   layers:
   - Default
   - TransparentFX

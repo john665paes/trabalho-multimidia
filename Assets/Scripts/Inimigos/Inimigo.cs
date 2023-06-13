@@ -9,7 +9,7 @@ public class Inimigo : MonoBehaviour{
     private bool moverInimigo = false;
     private Animator animator;
     public int dano;
-    public int hpInimigo = 5
+    public int hpInimigo = 5;
 
     void Awake(){
         animator = GetComponent<Animator>();
